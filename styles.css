@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #menu ul li > a {
     display: block;
-
+    position: relative;
     width: max-content;
     line-height: 85px;
     text-align: center;
@@ -199,10 +199,36 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* SUBMENU */
-#menu .sub-menu a {
+.sub-menu {
     display: none;
+    width: 100%;
 }
 
+#menu ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 20px 0px;
+    width: max-content;
+    background-color: rgb(255, 255, 255);
+    margin-top: 4px;
+    border-top: 2px solid rgb(243, 243, 243);
+    padding: 40px 0px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.sub-menu a {
+    display: block;
+    color: rgb(5, 7, 72);
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none !important;
+}
+
+.sub-menu .sub-menu-grid {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+}
 
 
 /* SECTION 1 */
